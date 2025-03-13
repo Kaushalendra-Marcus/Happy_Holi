@@ -1,0 +1,91 @@
+/* Full-screen background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+     /* Ensure it stays behind other content */
+    overflow: hidden;
+  }
+  
+  /* Gradient animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Bubbles */
+  .bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    border-radius: 50%;
+    animation: float 5s infinite ease-in;
+  }
+  
+  .bubble-1 {
+    left: 10%;
+    background: linear-gradient(45deg, #ff0008, #ee00ff, #df10a4, #074fcc);
+    animation-duration: 6s;
+    animation-delay: 0s;
+  }
+  
+  .bubble-2 {
+    left: 20%;
+    animation-duration: 8s;
+    background: linear-gradient(60deg, #c02c31, #f0ffb9, #df10a4, #074fcc);
+
+    animation-delay: 2s;
+  }
+  
+  .bubble-3 {
+    left: 35%;
+    animation-duration: 7s;
+    background: linear-gradient(10deg, #c02c31, #ffffff, #df10a4, #074fcc);
+
+    animation-delay: 1s;
+  }
+  
+  .bubble-4 {
+    left: 50%;
+    animation-duration: 9s;
+    background: linear-gradient(130deg, #c02c31, #03f0a9, #ff00b7, #074fcc);
+
+    animation-delay: 3s;
+  }
+  
+  .bubble-5 {
+    left: 65%;
+    animation-duration: 5s;
+    background: linear-gradient(69deg, #ff0008, #03fc34, #df10a4, #074fcc);
+
+    animation-delay: 0s;
+  }
+  
+  /* Bubbles floating animation */
+  @keyframes float {
+    0% {
+      bottom: -100px;
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      bottom: 100%;
+      transform: translateX(-100px);
+    }
+  }
