@@ -4,10 +4,11 @@ import Home from './Components/Navbar/Home'
 import Music from './Components/Navbar/Music'
 import Navigation from './Components/Navbar/Navigation'
 import AnimatedBackground from './Components/Navbar/animatedbg/AnimatedBackground'
-
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <>
+    <Analytics />
     <AnimatedBackground />
       <Navigation />
       <Routes>
